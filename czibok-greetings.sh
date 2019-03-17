@@ -22,7 +22,7 @@ ${YOUTUBE-DL} -i https://www.youtube.com/channel/UClkrEAh4ygvlywtIEIJJ-rA --down
 --postprocessor-args '-ss 00:00:00.00 -t 00:00:03.30' --recode-video mp4
 
 # Add label to every greeting
-TOTAL=`ls archive/2*.mp4`
+TOTAL=`ls archive/2*.mp4|wc -l`
 COUNTER=1
 for i in `(cd archive; ls 2*.mp4|head -n 2)`; do
 	YEAR=${i:0:4}
