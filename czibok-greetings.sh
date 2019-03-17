@@ -24,7 +24,7 @@ ${YOUTUBE-DL} -i https://www.youtube.com/channel/UClkrEAh4ygvlywtIEIJJ-rA --down
 # Add label to every greeting
 TOTAL=`ls archive/2*.mp4|wc -l`
 COUNTER=1
-for i in `(cd archive; ls 2*.mp4|head -n 2)`; do
+for i in `(cd archive; ls 2*.mp4)`; do
 	YEAR=${i:0:4}
 	MONTH=${i:4:2}
 	DAY=${i:6:2}
