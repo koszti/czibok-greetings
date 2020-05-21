@@ -17,7 +17,7 @@ fi
 
 
 # Download every video from the channel and cut the meaningful seconds
-${YOUTUBE-DL} -i https://www.youtube.com/channel/UClkrEAh4ygvlywtIEIJJ-rA --download-archive archive.txt \
+${YOUTUBEDL} -i https://www.youtube.com/channel/UClkrEAh4ygvlywtIEIJJ-rA --download-archive archive.txt \
 -o 'archive/%(upload_date)s-%(id)s.%(location)s.%(ext)s' -f 'bestvideo[ext=webm]+bestaudio[ext=webm]' \
 --postprocessor-args '-ss 00:00:00.00 -t 00:00:03.30' --recode-video mp4
 
