@@ -34,7 +34,7 @@ for i in `(cd archive; ls 2*.mp4)`; do
 	
 	# Draw text
 	${FFMPEG} -i ${IN} \
-	-vf "[in]drawtext=OpenSans-Regular.ttf:text='Uploaded at\: ${YEAR}.${MONTH}.${DAY}':bordercolor=black@0.4:borderw=2:fontcolor=white:fontsize=48:x=75:y=100,drawtext=OpenSans-Regular.ttf:text='Counter\: ${COUNTER}':bordercolor=black@0.4:borderw=2:fontcolor=white:fontsize=48:x=75:y=160" \
+	-vf "[in]drawtext=OpenSans-Regular.ttf:text='Uploaded at\: ${YEAR}.${MONTH}.${DAY}':bordercolor=black@0.4:borderw=2:fontcolor=white:fontsize=48:x=75:y=160,drawtext=OpenSans-Regular.ttf:text='Szorítunk Laci, gyógyulj meg!  ${COUNTER}x':bordercolor=black@0.4:borderw=2:fontcolor=white:fontsize=48:x=75:y=80" \
 	-y ${LBL}
 
 	# Convert to intermediate .MTS to avoid DTS in wrong order when concatenating mp4
